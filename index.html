@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <title>Mini Shop</title>
+  <link rel="stylesheet" href="output.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1A1A2E] text-white">
+
+  <!-- ✅ NAVIGATION BAR -->
+  <nav class="flex justify-between items-center p-4 bg-[#000000] text-white">
+    <a href="#" class="flex gap-2">
+      <span class="text-[#FFD700]">Mini Shop</span>
+    </a>
+
+    <!-- ✅ Hamburger Button -->
+    <button class="md:hidden" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars text-2xl text-white"></i>
+    </button>
+
+    <!-- ✅ Desktop Menu -->
+    <ul class="hidden md:flex space-x-5">
+      <li class="hover:bg-[#FFD700] hover:text-black px-3 py-1 rounded">Home</li>
+      <li class="hover:bg-[#FFD700] hover:text-black px-3 py-1 rounded">About</li>
+      <li class="hover:bg-[#FFD700] hover:text-black px-3 py-1 rounded">Shop</li>
+      <li class="hover:bg-[#FFD700] hover:text-black px-3 py-1 rounded">Top Choices</li>
+    </ul>
+
+    <!-- ✅ Desktop Cart Button -->
+    <button class="hidden md:flex items-center gap-2 border border-[#FFD700] px-4 py-2 rounded hover:bg-[#FFD700] hover:text-black">
+      <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+    </button>
+  </nav>
+
+  <!-- ✅ MOBILE MENU -->
+  <div id="mobileMenu" class="fixed bg-[#000000] text-white inset-0 p-6 hidden z-50">
+    <div class="flex justify-between items-center mb-6">
+      <h2 class="text-xl font-semibold">Menu</h2>
+      <button onclick="toggleMenu()">
+        <i class="fa-solid fa-xmark text-2xl text-white"></i>
+      </button>
+    </div>
+    <ul class="space-y-4">
+      <li><a href="#" class="block hover:bg-[#FFD700] hover:text-black px-3 py-2 rounded">Home</a></li>
+      <li><a href="#" class="block hover:bg-[#FFD700] hover:text-black px-3 py-2 rounded">About</a></li>
+      <li><a href="#" class="block hover:bg-[#FFD700] hover:text-black px-3 py-2 rounded">Shop</a></li>
+      <li><a href="#" class="block hover:bg-[#FFD700] hover:text-black px-3 py-2 rounded">Top Choices</a></li>
+    </ul>
+  </div>
+
+  <!-- ✅ MAIN SECTION -->
+
+  <!-- 🔥 Two-column Section -->
+<section class="bg-[#1A1A2E] text-white px-6 py-16 md:px-16">
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- 📝 Left: Headline and Text -->
+    <div>
+      <h2 class="text-4xl font-bold mb-6 leading-tight">
+        We’re changing<br />
+        the way people<br />
+        connect
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. 
+        Elit sunt amet fugiat veniam occaecat fugiat aliqua.
+      </p>
+    </div>
+
+    <!-- 🖼️ Right: Image Grid -->
+    <div class="grid grid-cols-2 gap-4">
+      <img src="1.png" alt="People" class="rounded-xl shadow-lg object-cover h-38 w-full">
+      <img src="2.png" alt="Team" class="rounded-xl shadow-lg object-cover h-42 w-full">
+      <img src="3.png" alt="Discussion" class="rounded-xl shadow-lg object-cover h-42 w-full">
+      <img src="4.png" alt="Workspace" class="rounded-xl shadow-lg object-cover h-53 w-full">
+    </div>
+    
+  </div>
+</section>
+
+<section class="bg-[#1A1A2E] text-white py-16 px-6 md:px-20">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold">Why Shop With Us</h2>
+    <p class="text-gray-400 mt-4 text-lg">Quality. Style. Experience you can trust.</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-10 text-center">
+    <!-- Feature 1 -->
+    <div class="p-6 bg-[#000000] rounded-xl shadow-lg hover:shadow-xl transition">
+      <i class="fa-solid fa-truck text-[#FFD700] text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+      <p class="text-gray-400">We ship quickly with real-time tracking & updates.</p>
+    </div>
+    <!-- Feature 2 -->
+    <div class="p-6 bg-[#000000] rounded-xl shadow-lg hover:shadow-xl transition">
+      <i class="fa-solid fa-star text-[#FFD700] text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">Premium Quality</h3>
+      <p class="text-gray-400">Only the best products pass our standards.</p>
+    </div>
+    <!-- Feature 3 -->
+    <div class="p-6 bg-[#000000] rounded-xl shadow-lg hover:shadow-xl transition">
+      <i class="fa-solid fa-headset text-[#FFD700] text-4xl mb-4"></i>
+      <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+      <p class="text-gray-400">We're here whenever you need help or advice.</p>
+    </div>
+  </div>
+</section>
+<section class="bg-[#1A1A2E] text-white py-16 px-6 md:px-20">
+  <div class="mb-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold">Popular Products</h2>
+    <p class="text-gray-400 mt-3">Handpicked favorites just for you</p>
+  </div>
+
+  <div class="overflow-x-auto scrollbar-hide">
+    <div class="flex space-x-6">
+      <!-- Product Card 1 -->
+      <div class="min-w-[240px] bg-[#000] p-4 rounded-xl shadow-md">
+        <img src="product1.jpg" alt="Product 1" class="h-40 w-full object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg">Luxury Watch</h3>
+        <p class="text-[#FFD700] mb-2">$199</p>
+        <button class="w-full bg-[#FFD700] text-black py-2 px-4 rounded hover:bg-white hover:text-black transition">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="min-w-[240px] bg-[#000] p-4 rounded-xl shadow-md">
+        <img src="product2.jpg" alt="Product 2" class="h-40 w-full object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg">Designer Perfume</h3>
+        <p class="text-[#FFD700] mb-2">$89</p>
+        <button class="w-full bg-[#FFD700] text-black py-2 px-4 rounded hover:bg-white hover:text-black transition">
+          Add to Cart
+        </button>
+      </div>
+<div class="min-w-[240px] bg-[#000] p-4 rounded-xl shadow-md">
+        <img src="product1.jpg" alt="Product 1" class="h-40 w-full object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg">Luxury Watch</h3>
+        <p class="text-[#FFD700] mb-2">$199</p>
+        <button class="w-full bg-[#FFD700] text-black py-2 px-4 rounded hover:bg-white hover:text-black transition">
+          Add to Cart
+        </button>
+      </div>
+
+      <!-- Product Card 2 -->
+      <div class="min-w-[240px] bg-[#000] p-4 rounded-xl shadow-md">
+        <img src="product2.jpg" alt="Product 2" class="h-40 w-full object-cover rounded-md mb-4">
+        <h3 class="font-semibold text-lg">Designer Perfume</h3>
+        <p class="text-[#FFD700] mb-2">$89</p>
+        <button class="w-full bg-[#FFD700] text-black py-2 px-4 rounded hover:bg-white hover:text-black transition">
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-[#000] text-white py-20 px-6 md:px-20">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl md:text-4xl font-bold">What Our Customers Say</h2>
+    <p class="text-gray-400 mt-4 text-lg">Real feedback from our happy shoppers</p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <!-- Testimonial 1 -->
+    <div class="bg-[#1A1A2E] p-6 rounded-lg shadow-lg">
+      <p class="text-gray-300 italic">"Absolutely love the quality. Fast shipping and elegant packaging!"</p>
+      <div class="mt-4 text-[#FFD700] font-semibold">– Sarah L.</div>
+    </div>
+
+    <!-- Testimonial 2 -->
+    <div class="bg-[#1A1A2E] p-6 rounded-lg shadow-lg">
+      <p class="text-gray-300 italic">"Customer support was top-notch. I’ll definitely shop again."</p>
+      <div class="mt-4 text-[#FFD700] font-semibold">– James R.</div>
+    </div>
+
+    <!-- Testimonial 3 -->
+    <div class="bg-[#1A1A2E] p-6 rounded-lg shadow-lg">
+      <p class="text-gray-300 italic">"Minimal design with luxury feel. Highly recommend!"</p>
+      <div class="mt-4 text-[#FFD700] font-semibold">– Priya D.</div>
+    </div>
+  </div>
+</section>
+<footer class="bg-[#000] text-white px-6 py-12 md:px-20">
+  <div class="grid md:grid-cols-4 gap-10">
+
+    <!-- 🏪 Brand -->
+    <div>
+      <h2 class="text-2xl font-bold text-[#FFD700] mb-4">Mini Shop</h2>
+      <p class="text-gray-400">Your go-to destination for premium products crafted with elegance and quality.</p>
+    </div>
+
+    <!-- 🧭 Navigation -->
+    <div>
+      <h3 class="text-xl font-semibold mb-3 text-[#FFD700]">Explore</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-[#FFD700]">Home</a></li>
+        <li><a href="#" class="hover:text-[#FFD700]">Shop</a></li>
+        <li><a href="#" class="hover:text-[#FFD700]">About</a></li>
+        <li><a href="#" class="hover:text-[#FFD700]">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- 🧾 Legal -->
+    <div>
+      <h3 class="text-xl font-semibold mb-3 text-[#FFD700]">Legal</h3>
+      <ul class="space-y-2 text-gray-400">
+        <li><a href="#" class="hover:text-[#FFD700]">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-[#FFD700]">Terms & Conditions</a></li>
+        <li><a href="#" class="hover:text-[#FFD700]">Return Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- 📬 Newsletter -->
+    <div>
+      <h3 class="text-xl font-semibold mb-3 text-[#FFD700]">Join Our List</h3>
+      <p class="text-gray-400 mb-4">Get exclusive offers & updates</p>
+      <form class="flex flex-col gap-3">
+        <input type="email" placeholder="Email address" class="p-2 rounded bg-[#1A1A2E] text-white placeholder-gray-400">
+        <button class="bg-[#FFD700] text-black py-2 px-4 rounded hover:bg-white hover:text-black transition">Subscribe</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- 🌐 Footer Bottom -->
+  <div class="text-center mt-12 border-t border-gray-700 pt-6 text-gray-500 text-sm">
+    &copy; 2025 Mini Shop. All rights reserved.
+  </div>
+</footer>
+
+</body>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("hidden");
+  }
+</script>
+</html>
